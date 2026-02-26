@@ -1,0 +1,7 @@
+{
+  "name": "failure-recovery-automation",
+  "version": "0.1.0",
+  "summary": "Checkpoint-based rollback and adaptive retry/fallback strategy selection.",
+  "author": "Mogus",
+  "license": "MIT"
+}

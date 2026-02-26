@@ -1,0 +1,23 @@
+{
+  "default_order": [
+    "retry_same",
+    "retry_with_backoff",
+    "fallback_alternate_api",
+    "degraded_mode",
+    "escalate"
+  ],
+  "failure_map": {
+    "primary_api_timeout": [
+      "retry_with_backoff",
+      "fallback_alternate_api",
+      "degraded_mode",
+      "escalate"
+    ],
+    "provider_5xx": [
+      "fallback_alternate_api",
+      "retry_with_backoff",
+      "degraded_mode",
+      "escalate"
+    ]
+  }
+}

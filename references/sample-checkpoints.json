@@ -1,0 +1,7 @@
+{
+  "checkpoints": [
+    {"task_id": "job-123", "stable": true, "ts": "2026-02-26T15:00:00Z", "state_ref": "checkpoint://job-123/v3"},
+    {"task_id": "job-123", "stable": true, "ts": "2026-02-26T14:30:00Z", "state_ref": "checkpoint://job-123/v2"},
+    {"task_id": "job-987", "stable": true, "ts": "2026-02-26T13:00:00Z", "state_ref": "checkpoint://job-987/v1"}
+  ]
+}
