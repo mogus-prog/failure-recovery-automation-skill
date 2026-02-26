@@ -1,33 +1,68 @@
 # Failure Recovery Automation (OpenClaw Skill)
 
-A resilience skill that detects runtime failures, restores from stable checkpoints, and retries with adaptive fallback strategies (including alternate providers/APIs) to keep operations running.
+**Build better OpenClaw bots, faster.**
 
-## Features
-- Checkpoint selection and rollback reference
-- Bounded retry loops
-- Strategy switching based on failure reason
-- Fallback to alternate API/degraded mode
-- Full recovery audit logs
+Recovers failed runs with checkpoint rollback and adaptive fallback strategies (backoff, alternate providers, degraded mode).
+
+## Why this skill is useful
+
+- Reduces manual operations and repetitive decision overhead
+- Improves consistency and reliability in production workflows
+- Gives you a reusable automation block you can compose with other skills
+
+## What you can do with it
+
+- Run focused automation workflows around **Failure Recovery Automation**
+- Adapt behavior to your own process and constraints
+- Integrate outputs with your existing OpenClaw routines
 
 ## Quick Start
 
 ```bash
-python3 scripts/recover_task.py \
-  --task-id job-123 \
-  --failure-reason primary_api_timeout \
-  --checkpoints references/sample-checkpoints.json \
-  --strategies references/sample-strategies.json \
-  --out ./out/recovery-result.json \
-  --audit ./out/recovery-audit.md
+# Clone
+git clone https://github.com/mogus-prog/failure-recovery-automation-skill.git
+cd failure-recovery-automation-skill
+
+# Read usage and run sample flow from SKILL.md
 ```
 
-## Safety
-- No destructive state mutation
-- Retry bounds enforced
-- Escalates when recovery fails
+> This repository is designed to be used as an OpenClaw skill package. Start with `SKILL.md` for trigger guidance and workflow steps.
 
-## Commercial Support & Custom Builds
-Contact **DirtyLeopard.com** for production recovery orchestration, provider failover routing, and SLA-grade resilience workflows.
+## Ideal use cases
+
+- Personal AI operators who need dependable routines
+- Builders running multi-step automations
+- Teams who want reusable operational playbooks
+
+## Pair it with other skills
+
+This skill works best as part of a larger stack (monitoring + planning + execution + safety).
+
+## Commercial support / custom builds
+
+Want this adapted to your exact workflow and tech stack?
+
+- Custom implementation
+- Integration with your existing OpenClaw setup
+- Security hardening + approval-gated actions
+- Ongoing optimization and support
+
+**Contact:** https://dirtyleopard.com
+
+## Service Packages
+
+| Package | Price | Includes |
+|---|---:|---|
+| Starter Skill | $399 | 1 custom skill, setup docs, 1 revision |
+| Growth Bundle | $1,200 | 3 custom skills, workflow integration, 14-day support |
+| Operator Suite | $3,000+ | 5–8 skills, orchestration, security/reliability tuning |
+
+For commercial licensing or retainers, open an issue in this repo or contact via DirtyLeopard.com.
+
+## Contributing
+
+PRs and issues are welcome. If you test this in production, share results and edge cases.
 
 ## License
+
 MIT
